@@ -6,7 +6,7 @@ $(function () {
 
         $.ajax({
             type: "GET",
-            url: "http://ecourse.cpe.ku.ac.th/exceed/api/fingerpalm-temp/view",
+            url: "http://ecourse.cpe.ku.ac.th/exceed/api/fingerplam-indoor_temperature/view",
             dataType: "text",
             success: function (response) {
                 console.log("from server : " + response)
@@ -23,19 +23,6 @@ $(function () {
             }
         });
     }, 1000)
-    $('#on-button').on('click', function () {
-        $.ajax({
-            type: "POST",
-            url: "http://ecourse.cpe.ku.ac.th/exceed/api/fingerpalm-temp/set",
-            data: {
-                value: "20"
-            },
-            dataType: "json",
-            success: function (response) {
-                console.log(response)
-            }
-        });
-    })
 
 })
 

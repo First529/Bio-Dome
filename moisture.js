@@ -4,7 +4,7 @@ $(function(){
         
             $.ajax({
                 type: "GET",
-                url: "http://ecourse.cpe.ku.ac.th/exceed/api/fingerpalm-moisture/view",
+                url: "http://ecourse.cpe.ku.ac.th/exceed/api/fingerplam-indoor_humidity/view",
                 dataType: "text",
                 success: function (response) {
                     console.log(response)
@@ -12,19 +12,7 @@ $(function(){
                 }
             });
         },5000)
-    $('#on-button').on('click',function(){
-        $.ajax({
-            type: "POST",
-            url: "http://ecourse.cpe.ku.ac.th/exceed/api/fingerpalm-moisture/set",
-            data: {
-                value:"10"
-            },
-            dataType: "json",
-            success: function (response) {
-                console.log(response)
-            }
-        });
-    })
+    
 
 })
 
@@ -45,7 +33,7 @@ window.onload = function () {
     });
     
     var xVal = 0;
-    var yVal = 100; 
+    var yVal = 0; 
     var updateInterval = 1000;
     var dataLength = 20; // number of dataPoints visible at any point
     
