@@ -7,7 +7,7 @@ $(function(){
                 url: "http://ecourse.cpe.ku.ac.th/exceed/api/fingerpalm-temp/view",
                 dataType: "text",
                 success: function (response) {
-                    console.log(response)
+                    console.log("from server : "+response)
                     y = response
                 }
             });
@@ -17,7 +17,7 @@ $(function(){
             type: "POST",
             url: "http://ecourse.cpe.ku.ac.th/exceed/api/fingerpalm-temp/set",
             data: {
-                value:"10"
+                value:"20"
             },
             dataType: "json",
             success: function (response) {
@@ -30,10 +30,12 @@ $(function(){
 
     window.onload = function () {
 
+    var raw_data = [];
+
     var dps = []; // dataPoints
     var chart = new CanvasJS.Chart("chartContainer", {
         title :{
-            text: "Temperature chart (per second)"
+            text: "Temperature chart (per 5 second)"
         },
         axisY: {
             includeZero: false
@@ -57,9 +59,11 @@ $(function(){
             x: xVal,
             y: yVal
         })
-        xVal++;
+        xVal += 5;
         console.log(y)
-        yVal = parseInt(y);
+        yVal = parseInt(y)
+        raw_data.push(y)
+        console.log(raw_data)
     
         if (dps.length > dataLength) {
             dps.shift();

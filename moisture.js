@@ -4,7 +4,7 @@ $(function(){
         
             $.ajax({
                 type: "GET",
-                url: "http://ecourse.cpe.ku.ac.th/exceed/api/fingerpalm-temp/view",
+                url: "http://ecourse.cpe.ku.ac.th/exceed/api/fingerpalm-moisture/view",
                 dataType: "text",
                 success: function (response) {
                     console.log(response)
@@ -15,7 +15,7 @@ $(function(){
     $('#on-button').on('click',function(){
         $.ajax({
             type: "POST",
-            url: "http://ecourse.cpe.ku.ac.th/exceed/api/fingerpalm-temp/set",
+            url: "http://ecourse.cpe.ku.ac.th/exceed/api/fingerpalm-moisture/set",
             data: {
                 value:"10"
             },
@@ -33,7 +33,7 @@ window.onload = function () {
     var dps = []; // dataPoints
     var chart = new CanvasJS.Chart("chartContainer", {
         title :{
-            text: "Humidity chart"
+            text: "Humidity chart (per second)"
         },
         axisY: {
             includeZero: false

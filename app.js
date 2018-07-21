@@ -6,15 +6,21 @@ $(function() {
      });
 
      $("#button2") .mouseover(function () {
-        
+        this.src="./drops.png"
      }).mouseout(function () {
-        
+        this.src="./drop.png"
      });
 
-     $("#button3") .mouseover(function () {
-        this.src="./on.png"
-     }).mouseout(function () {
-         this.src="./off.png"
+     let count = 0
+     $("#button3").on('click',function () {
+         if (count == 0) {
+            this.src="./on.png"
+            count++;
+         } else{
+            this.src="./off.png"
+            count--;
+         }
+        
      });
 
      $("#button4") .mouseover(function () {

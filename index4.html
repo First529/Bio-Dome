@@ -1,51 +1,37 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
-        crossorigin="anonymous">
-    <link rel="stylesheet" href="./style.css">
-
-    <title>Temperature sensor</title>
+<script>
+        function startTime() {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('txt').innerHTML =
+                h + ":" + m + ":" + s;
+            var t = setTimeout(startTime, 500);
+        }
+        function checkTime(i) {
+            if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
+            return i;
+        }
+        
+    </script>
+    <style>
+        .front{
+            font-size: 50px
+        }
+        .left{
+            text-align: left
+        }
+    </style>
 </head>
-
-<body>
-    <h1 class="center">Temperature sensor</h1>
-
-    <div class="page-style2">
-        <div class="jumbotron jumbotron-fluid">
-            <div class="container" style="padding-left: 30px">
-                <div class="row">
-                        <div id="chartContainer" style="height: 370px; width:98.5%;"></div>
-                </div>
-                <div class="row">
-                    <div class="col-1">
-                        <button id="on-button" type="button" class="btn btn-dark">On</button>
-                    </div>
-                    
-                </div>
-
-            </div>
-        </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<body onload="startTime()" class="origin">
+    <div class="front" id="txt" >
     </div>
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
-        crossorigin="anonymous"></script>
-    <script src="./temp.js"></script>
-    <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
-<script type="text/javascript" src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
-<script type="text/javascript">
-</script>
-</body>
-
-</html>
