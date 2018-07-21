@@ -12,20 +12,55 @@ $(function() {
      });
 
      let count = 0
-     $("#button3").on('click',function () {
-         if (count == 0) {
-            this.src="./on.png"
-            count++;
-         } else{
-            this.src="./off.png"
-            count--;
-         }
-        
-     });
+     $(function(){
+        $("#button3").on('click',function () {
+            if (count == 0) {
+               this.src="./on.png"
+               count++;
+            } else{
+               this.src="./off.png"
+               count--;
+            }
 
-     $("#button4") .mouseover(function () {
-        this.src= "./buzz.png"
-     }).mouseout(function () {
-         this.src= "./bell.png"
-     });
+            $.ajax({
+                type: "POST",
+                url: "http://ecourse.cpe.ku.ac.th/exceed/api/fingerplam-indoor_LED/set",
+                data: {value : count},
+                dataType: "json",
+                success: function (response) {
+                    console.log(response)
+                }
+            });
+           
+        });
+        
+     })
+
+     let count2 = 0
+     $(function(){
+        $("#button4").on('click',function () {
+            if (count2 == 0) {
+               this.src="./waves.png"
+               count2++;
+            } else{
+               this.src="./wave.png"
+               count2--;
+            }
+
+            $.ajax({
+                type: "POST",
+                url: "http://ecourse.cpe.ku.ac.th/exceed/api/fingerplam-water/set",
+                data: {value : count2},
+                dataType: "json",
+                success: function (response) {
+                    console.log(response)
+                }
+            });
+           
+        });
+        
+     })
+     
+
+     
 });

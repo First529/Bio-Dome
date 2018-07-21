@@ -26,48 +26,101 @@
             </div>
         </div>
     </div>
-<div >
-    <div class="jumbotron jumbotron-fluid page-style">
-        <div class="row">
-            <div class="container">
-
-                    <div id="box" class="alert alert-primary" role="alert">
-                            0
-                          </div>
-            </div>
-        </div>
-    </div>
+    <div>
 
 
-    <div class="jumbotron jumbotron-fluid page-style jumbotron-trans">
-        <div class="container">
-
-            <div class="row">
+        <div class="jumbotron jumbotron-fluid page-style jumbotron-trans">
+            <div class="row" style="margin-left: 100px;margin-right: 100px;">
                 <div class="col-3">
                     <a href="./index2.html">
                         <input id="button1" type="image" src="./low.png" style="width: 250px" />
                     </a>
                 </div>
                 <div class="col-3">
+
                     <a href="./index3.html">
                         <input id="button2" type="image" src="./drop.png" style="width: 250px" />
                     </a>
                 </div>
                 <div class="col-3">
-                    <input id="button3" type="image" src="./off.png" style="width: 250px" />
-                </div>
 
+                    <div class="alert alert-dark" role="alert">
+                        <h1 class="lead">
+                            <b style="font-size: 30px;">Temperature now</b>
+                        </h1>
+                        
+                            <b id="box" style="font-size: 40px;">0</b>
+                            <b style="font-size: 40px;">°C</b>
+                        
+                        <h3 class="lead">
+                                <b style="font-size: 20px;">Temperature per 10 sec</b>
+                            </h3>
+                            <b id="boxa" style="font-size: 30px;">0</b>
+                            <b style="font-size: 30px;">°C</b>
+                    </div>
+                </div>
                 <div class="col-3">
-                    <a href="./index5.html">
-                        <input id="button4" type="image" src="" style="width: 250px" />
-                    </a>
-                </div>
-            </div>
+                    <div class="alert alert-dark" role="alert">
+                        <h1 class="lead">
+                            <b style="font-size: 30px;">Humidity</b>
+                        </h1>
+                            <b id="box2" style="font-size: 40px;">0</b>
 
+                            <h3 class="lead">
+                                    <b style="font-size: 20px;">Humidity per 10 sec</b>
+                                </h3>
+                                <b id="boxb" style="font-size: 30px;">0</b>
+                        </div>
+                    </div>
+                </div>
+                <div class="row"  style="margin-left: 100px; margin-right:100px;">
+                        <div class="col-3">
+                            <div style="margin-top: 50px">
+        
+                                <input id="button3" type="image" src="./off.png" style="width: 250px" />
+        
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div style="margin-top: 50px">
+                                
+                                    <input id="button4" type="image" src="./wave.png" style="width: 250px" />
+                                
+                            </div>
+                        </div>
+                        <div class="col-3">
+        
+                                <div class="alert alert-dark" role="alert">
+                                    <h1 class="lead">
+                                        <b style="font-size: 30px;">Volume</b>
+                                    </h1>
+                                    <div class="border-0 border-style">
+                                        <b id="box3" style="font-size: 40px;"></b>
+                                        <b style="font-size: 40px;">l
+                                            
+                                        </b>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                    </div>
+
+            </div>
+            
         </div>
+
+
+
     </div>
 
-</div>
+
+
+
+
+
+
+    </div>
 
 
     </div>
@@ -81,6 +134,7 @@
         crossorigin="anonymous"></script>
     <script src="./app.js"></script>
     <script src="./temp.js"></script>
+    <script src="./moisture.js"></script>
 </body>
 
 </html>

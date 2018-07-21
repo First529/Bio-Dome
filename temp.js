@@ -1,6 +1,7 @@
 var y = 0
 var total = 0;
 var count = 0
+var raw_data = []
 $(function () {
     setInterval(function () {
 
@@ -9,16 +10,20 @@ $(function () {
             url: "http://ecourse.cpe.ku.ac.th/exceed/api/fingerplam-indoor_temperature/view",
             dataType: "text",
             success: function (response) {
+                
                 console.log("from server : " + response)
                 y = response
+                raw_data.push(y)
+
                 count++;
                 total += parseInt(y);
+                $('#box').text(response)
                 if (count % 10 == 0) {
 
-                    var average = total / 10;
+                    var average = total / raw_data.length;
                     console.log("average " + average);
-                    $('#box').text(response)
-                    total = 0
+                    $('#boxa').text(average)
+                        
                 }
             }
         });
@@ -27,8 +32,6 @@ $(function () {
 })
 
 window.onload = function () {
-
-    var raw_data = [];
 
     var dps = []; // dataPoints
     var chart = new CanvasJS.Chart("chartContainer", {
@@ -61,7 +64,6 @@ window.onload = function () {
         xVal++;
         console.log(y)
         yVal = parseInt(y)
-        raw_data.push(y)
         console.log(raw_data)
 
 

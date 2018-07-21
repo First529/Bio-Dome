@@ -16,6 +16,7 @@
     margin-left: auto;
     margin-right: auto;
     width: 30%;
+    height: 400px;
 }
 
 .right-image {
@@ -33,3 +34,13 @@
     background: rgb(255, 255, 255); 
     background: rgba(255, 255, 255, 0.5); 
  }
+
+ .border-style{
+    border-width: 5px;
+    height: 200px;
+    width: 200px;
+    margin: auto;
+}
+
+  
+ 
