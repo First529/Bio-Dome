@@ -11,23 +11,31 @@
         crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
 
-    <title>Humidity sensor</title>
+    <title>Water flow sensor</title>
 </head>
 
 <body>
-    <h1 class="center">Humidity sensor</h1>
+    <h1 class="center">Water flow senser</h1>
 
     <div class="page-style2">
         <div class="jumbotron jumbotron-fluid">
             <div class="container" style="padding-left: 30px">
                 <div class="row">
-                        <div id="chartContainer" style="height: 370px; width:100%;"></div>
+                    <div class="col-8">
+                        <h1 class="display-4" >Fluid jumbotron</h1>
+                        <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p>
+                    </div>
+                    <div class="col-4">
+                        <img src="https://static.thenounproject.com/png/173863-200.png" class="img-fluid right-image" alt="Responsive image">
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-1">
                         <button id="on-button" type="button" class="btn btn-dark">On</button>
                     </div>
-                    
+                    <div class="col-2">
+                        <button id="off-button" type="button" class="btn btn-dark">Off</button>
+                    </div>
                 </div>
 
             </div>
@@ -41,11 +49,7 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
         crossorigin="anonymous"></script>
-    <script src="./moisture.js"></script>
-    <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
-<script type="text/javascript" src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
-<script type="text/javascript">
-</script>
+    <script src="./water-flow.js"></script>
 </body>
 
 </html>

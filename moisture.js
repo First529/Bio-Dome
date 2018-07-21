@@ -28,12 +28,12 @@ $(function(){
 
 })
 
-    window.onload = function () {
+window.onload = function () {
 
     var dps = []; // dataPoints
     var chart = new CanvasJS.Chart("chartContainer", {
         title :{
-            text: "Temperature chart (per second)"
+            text: "Humidity chart"
         },
         axisY: {
             includeZero: false
@@ -74,5 +74,3 @@ $(function(){
     }
     
     
-
-
