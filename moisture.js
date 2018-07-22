@@ -15,13 +15,35 @@ $(function () {
                 raw_data2.push(y2)
                 count2++;
                 total2 += parseInt(y2);
+                if (parseInt(response) > 70) {
+                    $.ajax({
+                        type: "POST",
+                        url: "http://ecourse.cpe.ku.ac.th/exceed/api/fingerplam-fan/set",
+                        data: {value : 1},
+                        dataType: "json",
+                        success: function (response) {
+                            console.log(response)
+                        }
+                    },500);
+                } else {
+                    $.ajax({
+                        type: "POST",
+                        url: "http://ecourse.cpe.ku.ac.th/exceed/api/fingerplam-fan/set",
+                        data: {value : 0},
+                        dataType: "json",
+                        success: function (response) {
+                            console.log(response)
+                        }
+                    },500);
+                }
                 $('#box2').text(response)
+
                 if (count2 % 10 == 0) {
 
                     var average2 = total2 / raw_data2.length;
                     console.log("average " + average2);
                     $('#boxb').text(average2.toFixed(2))
-                    
+
                 }
             }
         });
