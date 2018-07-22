@@ -22,7 +22,7 @@ $(function () {
 
                     var average = total / raw_data.length;
                     console.log("average " + average);
-                    $('#boxa').text(average)
+                    $('#boxa').text(average.toFixed(2))
                         
                 }
             }

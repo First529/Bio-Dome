@@ -20,7 +20,7 @@ $(function () {
 
                     var average2 = total2 / raw_data2.length;
                     console.log("average " + average2);
-                    $('#boxb').text(average2)
+                    $('#boxb').text(average2.toFixed(2))
                     
                 }
             }

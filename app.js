@@ -60,6 +60,32 @@ $(function() {
         });
         
      })
+
+
+     let count3 = 0
+     $(function(){
+        $("#button5").on('click',function () {
+            if (count3 == 0) {
+               this.src="./fans.png"
+               count3++;
+            } else{
+               this.src="./fan.png"
+               count3--;
+            }
+
+            $.ajax({
+                type: "POST",
+                url: "http://ecourse.cpe.ku.ac.th/exceed/api/fingerplam-fan/set",
+                data: {value : count3},
+                dataType: "json",
+                success: function (response) {
+                    console.log(response)
+                }
+            });
+           
+        });
+        
+     })
      
 
      
